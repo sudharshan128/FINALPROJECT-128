@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="practice_web.css" />
+        <link
+            href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+            rel="stylesheet"
+        />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <div class="logo"><a href="#">GCU Mart</a></div>
+            <div class="menu">
+                <a href=""><ion-icon name="close" class="close"></ion-icon></a>
+                <ul>
+                    <li><a href="#" class="under">HOME</a></li>
+                    <li><a href="#" class="under">SHOP</a></li>
+                    <li><a href="#" class="under">OUR PRODUCTS</a></li>
+                    <li><a href="#" class="under">CONTACT US</a></li>
+                    <li><a href="#" class="under">ABOUT US</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <a href="SHOES"
+                    ><input
+                        type="text"
+                        placeholder="Search"
+                        id="input"
+                    />
+                    <ion-icon class="s" name="search"></ion-icon>
+                </a>
+            </div>
+            <div class="heading">
+                <ul>
+                    <li><a href="#" class="under">HOME</a></li>
+                    <li><a href="#" class="under">SHOP</a></li>
+                    <li><a href="#" class="under">OUR PRODUCTS</a></li>
+                    <li><a href="contactus.html" class="under">CONTACT US</a></li>
+                    <li><a href="aboutus.html" class="under">ABOUT US</a></li>
+                </ul>
+            </div>
+            <div class="heading1">
+                <ion-icon name="menu" class="ham"></ion-icon>
+            </div>
+        </header>
+        <section>
+            <div class="section">
+                <div class="section1">
+                    <div class="img-slider">
+                        <img
+                            src="data:image/jpeg;base64,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"
+                            alt=""
+                            class="img"
+                        />
+                        <img
+                            src="https://images.pexels.com/photos/6347888/pexels-photo-6347888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt=""
+                            class="img"
+                        />
+                        <img
+                            src="https://images.pexels.com/photos/3962294/pexels-photo-3962294.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt=""
+                            class="img"
+                        />
+                        <img
+                            src="https://images.pexels.com/photos/2292953/pexels-photo-2292953.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt=""
+                            class="img"
+                        />
+                        <img
+                            src="https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt=""
+                            class="img"
+                        />
+                        <img
+                            src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt=""
+                            class="img"
+                        />
+                    </div>
+                </div>
+                <div class="section2">
+                    <div class="container">
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">SHOES</div>
+                            <div class="price">₹2000</div>
+                            <div class="info">
+                                These are the shoes worn by celebrities 
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="img img2">
+                                <img
+                                    src="https://images.pexels.com/photos/3649765/pexels-photo-3649765.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">MEN's T-SHIRT</div>
+                            <div class="price">₹1500</div>
+                            <div class="info">The new branded puma T-shirt</div>
+                        </div>
+                        <div class="items">
+                            <div class="img img3">
+                                <img
+                                    src="https://media.istockphoto.com/photos/folded-blue-jeans-on-a-white-background-modern-casual-clothing-flat-picture-id1281304280"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">JEANS</div>
+                            <div class="price">₹2500</div>
+                            <div class="info">These are the special type of imported JEANS.</div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://images.pexels.com/photos/8839887/pexels-photo-8839887.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">WATCH</div>
+                            <div class="price">₹2300</div>
+                            <div class="info">Metallic sonata titanic watch</div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://images.pexels.com/photos/6858618/pexels-photo-6858618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">SMART PHONE</div>
+                            <div class="price">₹20000-₹30000</div>
+                            <div class="info">All type of mobile brands.</div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://images.pexels.com/photos/5552789/pexels-photo-5552789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">TELEVISION</div>
+                            <div class="price">₹25000</div>
+                            <div class="info">
+                                The high quality HD smart TV by SONY.
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">PULLOVER</div>
+                            <div class="price">₹900</div>
+                            <div class="info">All types of pullovers are available.</div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://media.istockphoto.com/photos/vintage-plates-with-silver-teaspoons-picture-id184363070"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">DINNER SET</div>
+                            <div class="price">₹2500</div>
+                            <div class="info">
+                                All types of dinner items are available.
+                        
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://images.pexels.com/photos/6463348/pexels-photo-6463348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">BLANKETS</div>
+                            <div class="price">₹850</div>
+                            <div class="info">
+                                These are the blankets used in winter 
+                                season.
+                            
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://images.pexels.com/photos/2659939/pexels-photo-2659939.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">LAPTOP</div>
+                            <div class="price">₹82000</div>
+                            <div class="info">
+                                The all new ASUS laptop designed by experts.
+                                
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://media.istockphoto.com/photos/modern-kitchen-microwave-oven-picture-id1144960519"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">MICROWAVE OVAN</div>
+                            <div class="price">₹20000</div>
+                            <div class="info">
+                                iIt has the high priority micro waves
+                                that heats faster.
+                                
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://media.istockphoto.com/photos/black-coffee-maker-with-green-led-lights-picture-id177395430"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">COFFEE MAKER</div>
+                            <div class="price">₹12000</div>
+                            <div class="info">
+                                New delicios coffee can be made.
+                                
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://images.pexels.com/photos/6606354/pexels-photo-6606354.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">BED</div>
+                            <div class="price">₹22000</div>
+                            <div class="info">
+                                the softest bed in our collection.
+                            
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://media.istockphoto.com/photos/woman-turning-on-air-conditioner-picture-id1325708905"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">AIR CONDITIONER</div>
+                            <div class="price">₹28000</div>
+                            <div class="info">
+                                It will cool the entire room in 5 mins,
+                                By WIPRO.
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://images.pexels.com/photos/5834/nature-grass-leaf-green.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">STORY BOOK</div>
+                            <div class="price">₹500</div>
+                            <div class="info">
+                             All type of story books are available.   
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://images.pexels.com/photos/4339598/pexels-photo-4339598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name"> VANITY BAG</div>
+                            <div class="price">₹1200</div>
+                            <div class="info">
+                                All types of stylish ladies bags are
+                                available.
+                                
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://media.istockphoto.com/photos/hand-of-a-lady-selecting-yellow-colored-saree-in-a-shop-picture-id1301740530"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">SAREES</div>
+                            <div class="price">₹2000-₹10000</div>
+                            <div class="info">
+                                All types and all style of sarees are 
+                                here with us.
+                                
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="img img1">
+                                <img
+                                    src="https://images.pexels.com/photos/5816934/pexels-photo-5816934.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="name">WASHING MACHINE</div>
+                            <div class="price">₹20000</div>
+                            <div class="info">
+                                At once 20 cloths can be washed
+                                by our machine.
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-container text-center mt-5">
+                <h2>Contact Us</h2>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter your name">
+                    <label for="floatingInput">Name </label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingnumber" placeholder="Enter your phone number">
+                    <label for="floatingnumber">Phone Number</label>
+                    <button type="button" class="btn btn-primary mt-4">Submit</button>
+                </div>
+                
+            </div>
+        </section>
+        <footer clas="mt-5">
+            <div class="footer0 mt-5"><h1>GCU Mart</h1></div>
+            <div class="footer1 ">
+                Connect with us at
+                <div class="social-media">
+                    <a href="#"> <ion-icon name="logo-facebook"></ion-icon> </a>
+                    <a href="#"> <ion-icon name="logo-linkedin"></ion-icon> </a>
+                    <a href="#"> <ion-icon name="logo-youtube"></ion-icon> </a>
+                    <a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="#"> <ion-icon name="logo-twitter"></ion-icon> </a>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="product">
+                    <div class="heading">Products</div>
+                    <div class="div">Sell your Products</div>
+                    <div class="div">Advertise</div>
+                    <div class="div">Pricing</div>
+                    <div class="div">Product Buisness</div>
+                </div>
+                <div class="services">
+                    <div class="heading">Services</div>
+                    <div class="div">Return</div>
+                    <div class="div">Cash Back</div>
+                    <div class="div">Affiliate Marketing</div>
+                    <div class="div">Others</div>
+                </div>
+                <div class="Company">
+                    <div class="heading">Company</div>
+                    <div class="div">Complaint</div>
+                    <div class="div">Careers</div>
+                    <div class="div">Affiliate Marketing</div>
+                    <div class="div">Support</div>
+                </div>
+                <div class="Get Help">
+                    <div class="heading">Get Help</div>
+                    <div class="div">Help Center</div>
+                    <div class="div">Privacy Policy</div>
+                    <div class="div">Terms</div>
+                    <div class="div">Login</div>
+                </div>
+            </div>
+            <div class="footer3">
+                Copyright ©
+                <h4>ShoPperZ</h4>
+                2021-2028
+            </div>
+        </footer>
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <script src="practice_web.js"></script>
+        </script>
+    </body>
+</html>
